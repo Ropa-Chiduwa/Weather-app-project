@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Users/user/Desktop/Final project/src/index.css" />
+    <script
+      src="https://kit.fontawesome.com/34ef6475c2.js"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="app">
+          <div class="row">
+            <div class="col-8">
+              <form id="search-form">
+                <div class="input-group mb-3 mt-2">
+                    <input
+                    type="search"
+                    placeholder="Search a city"
+                    class="form-control "
+                    id="input"
+                    autocomplete="off"/>
+                <button 
+                    type="submit"
+                    class="btn btn-outline-secondary" 
+                    id="search_btn">
+                  <span class="fas fa-search"></span>
+                </button>
+                </div>
+            </div>
+                <div class="col-4">
+                <button 
+                    type="button" 
+                    id="current_location" 
+                    class="btn btn-outline-secondary mb-3 mt-2">
+                    <span class="fas fa-location-arrow"></span>
+                </button>
+                </div>
+            </form>
+            </div>
+          <h1 id="city"></h1>
+          <div class="overview">
+            <ul>
+              <li class="description" id="description"></li>
+              <li><span class="date" id="date_time"></span></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix main-icon">
+                <img
+                  src="http://openweathermap.org/img/wn/03d@2x.png"
+                  alt="weather icon"
+                  id="icon"
+                  class="float-left icon"
+                />
+                <span class="float-left">
+                  <span class="temperature" id="temperature"></span>
+                  <span class="units"><a href="#" id="celsius" class="active">°C</a> | 
+                    <a href="#" id="farenheit"> °F</a></span>
+                </span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul class="details">
+                <li>Feels like: <span id="feels_like"></span>°C</li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
+            </div>
+          </div>
+          <div class="row forecast" id="forecast">
+          </div>
+        </div>
+        <footer>
+          <a class="github"
+            href="https://"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Belinda Chiduwa
+        </footer>
+      </div>
+    </div>
+    <script src="/Users/user/Desktop/Final project/src/index.js"></script>
+  </body>
+</html>
